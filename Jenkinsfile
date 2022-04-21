@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Git Clone'){
             steps{
-                checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'github-private-key', url: 'https://github.com/Mandar899/node-docker-login.git']]])
+                checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[credentialsId: 'github-private-key', url: 'https://github.com/Mandar899/node-docker-login.git']]])
             }   
         }
 
