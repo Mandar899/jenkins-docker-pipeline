@@ -32,5 +32,13 @@ pipeline {
                 }
             }
         }
+
+        stage('Deploying App to Kubernetes'){
+            steps{
+                script{
+                    kubernetesDeploy(configs:"node-login.yml",kubeconfigId:'kubernetes')
+                }
+            }
+        }
     }
 }
